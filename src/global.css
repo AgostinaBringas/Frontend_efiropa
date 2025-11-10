@@ -1,0 +1,104 @@
+:root {
+  --primary-bg: #1e2a38; /* Azul intermedio */
+  --secondary-bg: #2a4d69; /* Azul más intenso */
+  --accent-color: #4b86b4; /* Azul claro para hover o detalles */
+  --text-color: #ffffff;
+  --font-main: "Poppins", sans-serif;
+  --font-title: "Playfair Display", serif;
+}
+
+/* Reseteo y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estructura general */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--secondary-bg) !important;
+  font-family: var(--font-title);
+}
+
+.navbar-brand {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: white !important;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: white !important;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--secondary-bg);
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+}
+
+/* Tarjetas (productos, secciones, etc.) */
+.card {
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #1e1e1e;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+  color: var(--accent-color);
+  font-family: var(--font-title);
+}
+
+/* Footer */
+footer, .footer {
+  background-color: var(--secondary-bg);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.95rem;
+  font-family: var(--font-title);
+}
